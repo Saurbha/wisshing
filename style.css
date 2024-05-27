@@ -1,0 +1,155 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.birthdaycard{
+    position: relative;
+    width: 250px;
+    height: 350px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 1s;
+}
+
+.birthdaycard:hover{
+    transform: perspective(2500px) rotate(5deg);
+    box-shadow: insert 100px 20px 100px rgba(0, 0,0, 0.2), 0 10px 100px rgba(0, 0, 0, 0.4);
+}
+
+.birthdaycard:hover .cardFont{
+    transform: rotateY(-160deg);
+}
+.birthdaycard:hover .happy{
+    visibility: hidden;
+}
+
+.cardFont{
+    position: relative;
+    background-color: aqua;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgb(0,0,0,0,0.2), 30px 0 50px rgba(0,0,0,0.4);
+    transition: 0.6s;
+}
+.happy {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin: 30px;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085, 100%);
+    transition: 0.1s;
+}
+
+.ballons{
+    position: absolute;
+
+}
+.ballonsOne, .ballonstwo,  .ballonsthree, .ballonsfour{
+    position: absolute;
+    width: 85px;
+    height: 95px;
+    border-radius: 50%;
+}
+
+.ballonsOne{
+    background-color: rgb(239, 71, 111, 0.7);
+    left: -10px;
+    top: 50px;
+}
+
+.ballonstwo{
+    background-color: rgb(6, 214, 160, 0.7);
+    left: 50px;
+    top: 20px;
+}
+
+.ballonsthree{
+
+ background-color: rgb(255, 209, 102, 0.7);
+    left: 110px;
+    top: 50px;
+}
+
+.ballonsfour{
+    background-color: rgb(17, 138, 178, 0.7);
+    left: 170px;
+    top: 50px;
+
+}
+
+.ballonsOne:after, .ballonstwo:after,  .ballonsthree:after, .ballonsfour:after{
+    content: "";
+    position: absolute;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    top:94px;
+    left: 37px;
+    
+}
+
+
+.ballonsOne:after{
+    border-bottom: 10px solid #ef476f;
+}
+
+.ballonstwo:after{
+    border-bottom: 10px solid #06d6a0;
+}
+
+.ballonsthree:after{
+    border-bottom: 10px solid #ffd166;
+}
+
+
+.ballonsfour:after{
+    border-bottom: 10px solid #118ab2;
+}
+
+.cardinside{
+    position: absolute;
+    background-color: red;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 350px;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2);
+    z-index: -1;
+}
+
+
+p{
+    font-family: 'Brush Script MT',cursive;
+margin: 20px;
+color: solid black;
+
+}
+
+p, h4{
+    font-family: 'Brush Script MT',cursive;
+margin: 20px;
+color: solid black;
+
+
+}
+.name {
+    position: absolute;
+    left: 180px;
+    top:300px;
+    color: #333;
+}
+
+.back{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #333;
+    text-align: center;
+    margin: 30px;
+    outline-color: #ef476f;
+    outline-style: dotted;
+
+
+}
+
